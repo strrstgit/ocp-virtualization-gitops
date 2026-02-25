@@ -1,0 +1,4 @@
+namespace: vm-project
+
+resources:
+  - ../../base
