@@ -1,0 +1,16 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  name: rhel-dv
+spec:
+  sourceRef:
+    kind: DataSource
+    name: rhel8-custom
+    namespace: openshift-cnv
+  pvc:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 20Gi
+    storageClassName: nfs-datastore

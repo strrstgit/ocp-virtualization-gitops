@@ -1,0 +1,23 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: rhel-vm
+spec:
+  running: true
+  template:
+    spec:
+      domain:
+        cpu:
+          cores: 2
+        resources:
+          requests:
+            memory: 4Gi
+      devices:
+        disks:
+          - name: rootdisk
+            disk:
+              bus: virtio
+      volumes:
+        - name: rootdisk
+          dataVolume:
+            name: rhel-dv

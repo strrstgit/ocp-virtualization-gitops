@@ -2,5 +2,4 @@ namespace: vm-project
 
 resources:
   - ../../base
-    - dv.yaml
-    - vm.yaml
+  
